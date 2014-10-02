@@ -107,6 +107,7 @@
     </Compile>
     <Compile Include="RootFixtures.cs" />
     <Compile Include="RootImages.cs" />
+    <Compile Include="RootMain.cs" />
     <Compile Include="RootObject.cs" />
     <Compile Include="RootVideos.cs" />
     <Compile Include="SampleData\FixturesSampleData\FixturesSampleData.xaml.cs">
