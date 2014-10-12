@@ -96,9 +96,22 @@ namespace IccWorld2015
         {
             if (Debugger.IsAttached)
             {
-                // An unhandled exception has occurred; break into the debugger
                 Debugger.Break();
             }
+
+            if (e.ExceptionObject == null || e.ExceptionObject.Message == null)
+            {
+                return;
+            }
+            String ex = e.ExceptionObject.ToString().ToLower();
+            if (ex.Contains("frameworkdispatcher.update") || ex.Contains("the given key was not present in the dictionary"))
+            {
+                e.Handled = true;
+            }
+            else
+            {
+            }
+
         }
 
         #region Phone application initialization
